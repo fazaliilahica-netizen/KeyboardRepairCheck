@@ -1,0 +1,128 @@
+{
+ "source": "stand-in (hand-written, NO model)",
+ "time": "2026-11-04 08:15:59",
+ "before_ok": 0,
+ "after_ok": 7,
+ "total": 7,
+ "rows": [
+  {
+   "id": "menu",
+   "label": "Menu button",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"btn\" onclick=\"document.getElementById('m').hidden=false;this.dataset.on=1\">Menu</button><ul id=\"m\" hidden><li>Home</li><li>Help</li></ul>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "close",
+   "label": "Dialog close",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<div id=\"dlg\">Settings <button id=\"t\" class=\"x\" aria-label=\"Close\" onclick=\"document.getElementById('dlg').dataset.closed=1\">&times;</button></div>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "switch",
+   "label": "Dark-mode switch",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" role=\"switch\" aria-checked=\"false\" class=\"sw\" onclick=\"this.dataset.on=this.dataset.on==='1'?'0':'1';this.setAttribute('aria-checked',this.dataset.on==='1')\">Dark mode</button>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "tabs",
+   "label": "Tab buttons",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" role=\"tab\" class=\"tab\" onclick=\"document.getElementById('p').textContent='Details shown'\">Details</button><div id=\"p\">None</div>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "accordion",
+   "label": "Accordion header",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<h3><button id=\"t\" class=\"acc\" aria-expanded=\"false\" onclick=\"document.getElementById('b').hidden=false;this.setAttribute('aria-expanded','true')\">Shipping info</button></h3><div id=\"b\" hidden>Ships in 2 days</div>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "link",
+   "label": "Fake link",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<a id=\"t\" class=\"lnk\" href=\"#more\" onclick=\"document.body.dataset.went=1\">Read more</a>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "focusring",
+   "label": "Button with focus ring removed",
+   "before": {
+    "reached": true,
+    "focus": false,
+    "enter": true,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"btn\" onclick=\"this.dataset.on=1\">Save</button>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "enter": true,
+    "ok": true
+   }
+  }
+ ]
+}
