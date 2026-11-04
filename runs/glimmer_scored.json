@@ -1,0 +1,149 @@
+{
+ "source": "repairs file runs/glimmer_run.json (model output generated outside this script)",
+ "time": "2026-11-04 11:58:01",
+ "before_ok": 0,
+ "after_ok": 7,
+ "total": 7,
+ "rows": [
+  {
+   "id": "menu",
+   "raw": null,
+   "label": "Menu button",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "focus_pixels_changed": null,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"btn\" onclick=\"document.getElementById('m').hidden=false;this.dataset.on=1\">Menu</button><ul id=\"m\" hidden><li>Home</li><li>Help</li></ul>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "focus_pixels_changed": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "close",
+   "raw": null,
+   "label": "Dialog close",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "focus_pixels_changed": null,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<div id=\"dlg\">Settings <button id=\"t\" class=\"x\" onclick=\"document.getElementById('dlg').dataset.closed=1\">&times;</button></div>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "focus_pixels_changed": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "switch",
+   "raw": null,
+   "label": "Dark-mode switch",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "focus_pixels_changed": null,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"sw\" onclick=\"this.dataset.on=this.dataset.on==='1'?'0':'1'\">Dark mode</button>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "focus_pixels_changed": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "tabs",
+   "raw": null,
+   "label": "Tab buttons",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "focus_pixels_changed": null,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"tab\" onclick=\"document.getElementById('p').textContent='Details shown'\">Details</button><div id=\"p\">None</div>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "focus_pixels_changed": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "accordion",
+   "raw": null,
+   "label": "Accordion header",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "focus_pixels_changed": null,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"acc\" onclick=\"document.getElementById('b').hidden=false\">Shipping info</button><div id=\"b\" hidden>Ships in 2 days</div>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "focus_pixels_changed": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "link",
+   "raw": null,
+   "label": "Fake link",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "focus_pixels_changed": null,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"lnk\" onclick=\"document.body.dataset.went=1\">Read more</button>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "focus_pixels_changed": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "focusring",
+   "raw": null,
+   "label": "Button with focus ring removed",
+   "before": {
+    "reached": true,
+    "focus": false,
+    "focus_pixels_changed": false,
+    "enter": true,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"btn\" onclick=\"this.dataset.on=1\">Save</button>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "focus_pixels_changed": true,
+    "enter": true,
+    "ok": true
+   }
+  }
+ ]
+}
