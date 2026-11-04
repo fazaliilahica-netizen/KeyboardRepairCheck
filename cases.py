@@ -39,3 +39,4 @@ SYSTEM = ("You repair web accessibility problems. You get one HTML fragment. The
  "id=\"t\" works with a mouse but not with the keyboard. Return ONLY the corrected HTML fragment, "
  "keeping id=\"t\" and the same visible behaviour. Use native elements (button, a) where suitable. "
  "No explanation, no code fences.")
+
