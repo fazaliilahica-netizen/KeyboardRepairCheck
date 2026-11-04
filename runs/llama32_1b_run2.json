@@ -1,0 +1,261 @@
+{
+ "source": "model: llama-3.2-1b-instruct-q4_k_m",
+ "time": "2026-11-04 08:48:02",
+ "before_ok": 0,
+ "after_ok": 1,
+ "total": 7,
+ "rows": [
+  {
+   "id": "menu",
+   "raw": {
+    "request": {
+     "model": "llama-3.2-1b-instruct-q4_k_m",
+     "temperature": 0.2,
+     "max_tokens": 1500,
+     "messages": [
+      {
+       "role": "system",
+       "content": "You repair web accessibility problems. You get one HTML fragment. The control with id=\"t\" works with a mouse but not with the keyboard. Return ONLY the corrected HTML fragment, keeping id=\"t\" and the same visible behaviour. Use native elements (button, a) where suitable. No explanation, no code fences."
+      },
+      {
+       "role": "user",
+       "content": "<div id=\"t\" class=\"btn\" onclick=\"document.getElementById('m').hidden=false;this.dataset.on=1\">Menu</div><ul id=\"m\" hidden><li>Home</li><li>Help</li></ul>"
+      }
+     ]
+    },
+    "raw_response": "<div id=\"t\" class=\"btn\" onclick=\"document.getElementById('m').hidden=false;this.dataset.on=1\">Menu</div><button id=\"m\" hidden><a id=\"m1\" hidden>Help</a></button>",
+    "finish": "stop"
+   },
+   "label": "Menu button",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<div id=\"t\" class=\"btn\" onclick=\"document.getElementById('m').hidden=false;this.dataset.on=1\">Menu</div><button id=\"m\" hidden><a id=\"m1\" hidden>Help</a></button>",
+   "after": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   }
+  },
+  {
+   "id": "close",
+   "raw": {
+    "request": {
+     "model": "llama-3.2-1b-instruct-q4_k_m",
+     "temperature": 0.2,
+     "max_tokens": 1500,
+     "messages": [
+      {
+       "role": "system",
+       "content": "You repair web accessibility problems. You get one HTML fragment. The control with id=\"t\" works with a mouse but not with the keyboard. Return ONLY the corrected HTML fragment, keeping id=\"t\" and the same visible behaviour. Use native elements (button, a) where suitable. No explanation, no code fences."
+      },
+      {
+       "role": "user",
+       "content": "<div id=\"dlg\">Settings <span id=\"t\" class=\"x\" onclick=\"document.getElementById('dlg').dataset.closed=1\">&times;</span></div>"
+      }
+     ]
+    },
+    "raw_response": "<div id=\"dlg\"><button id=\"t\" class=\"x\" onclick=\"document.getElementById('dlg').dataset.closed=1\">&times;</button></div>",
+    "finish": "stop"
+   },
+   "label": "Dialog close",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<div id=\"dlg\"><button id=\"t\" class=\"x\" onclick=\"document.getElementById('dlg').dataset.closed=1\">&times;</button></div>",
+   "after": {
+    "reached": true,
+    "focus": true,
+    "enter": true,
+    "ok": true
+   }
+  },
+  {
+   "id": "switch",
+   "raw": {
+    "request": {
+     "model": "llama-3.2-1b-instruct-q4_k_m",
+     "temperature": 0.2,
+     "max_tokens": 1500,
+     "messages": [
+      {
+       "role": "system",
+       "content": "You repair web accessibility problems. You get one HTML fragment. The control with id=\"t\" works with a mouse but not with the keyboard. Return ONLY the corrected HTML fragment, keeping id=\"t\" and the same visible behaviour. Use native elements (button, a) where suitable. No explanation, no code fences."
+      },
+      {
+       "role": "user",
+       "content": "<div id=\"t\" class=\"sw\" onclick=\"this.dataset.on=this.dataset.on==='1'?'0':'1'\">Dark mode</div>"
+      }
+     ]
+    },
+    "raw_response": "<div id=\"t\" class=\"sw\" role=\"button\" aria-label=\"Dark mode\" aria-checked=\"false\" aria-expanded=\"false\" onclick=\"this.dataset.on=this.dataset.on==='1'?'0':'1'\">Dark mode</div>",
+    "finish": "stop"
+   },
+   "label": "Dark-mode switch",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<div id=\"t\" class=\"sw\" role=\"button\" aria-label=\"Dark mode\" aria-checked=\"false\" aria-expanded=\"false\" onclick=\"this.dataset.on=this.dataset.on==='1'?'0':'1'\">Dark mode</div>",
+   "after": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   }
+  },
+  {
+   "id": "tabs",
+   "raw": {
+    "request": {
+     "model": "llama-3.2-1b-instruct-q4_k_m",
+     "temperature": 0.2,
+     "max_tokens": 1500,
+     "messages": [
+      {
+       "role": "system",
+       "content": "You repair web accessibility problems. You get one HTML fragment. The control with id=\"t\" works with a mouse but not with the keyboard. Return ONLY the corrected HTML fragment, keeping id=\"t\" and the same visible behaviour. Use native elements (button, a) where suitable. No explanation, no code fences."
+      },
+      {
+       "role": "user",
+       "content": "<div id=\"t\" class=\"tab\" onclick=\"document.getElementById('p').textContent='Details shown'\">Details</div><div id=\"p\">None</div>"
+      }
+     ]
+    },
+    "raw_response": "<div class=\"tab\" id=\"t\" onclick=\"document.getElementById('p').textContent='Details shown'\">Details</div><button id=\"p\">None</button>",
+    "finish": "stop"
+   },
+   "label": "Tab buttons",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<div class=\"tab\" id=\"t\" onclick=\"document.getElementById('p').textContent='Details shown'\">Details</div><button id=\"p\">None</button>",
+   "after": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   }
+  },
+  {
+   "id": "accordion",
+   "raw": {
+    "request": {
+     "model": "llama-3.2-1b-instruct-q4_k_m",
+     "temperature": 0.2,
+     "max_tokens": 1500,
+     "messages": [
+      {
+       "role": "system",
+       "content": "You repair web accessibility problems. You get one HTML fragment. The control with id=\"t\" works with a mouse but not with the keyboard. Return ONLY the corrected HTML fragment, keeping id=\"t\" and the same visible behaviour. Use native elements (button, a) where suitable. No explanation, no code fences."
+      },
+      {
+       "role": "user",
+       "content": "<h3 id=\"t\" class=\"acc\" onclick=\"document.getElementById('b').hidden=false\">Shipping info</h3><div id=\"b\" hidden>Ships in 2 days</div>"
+      }
+     ]
+    },
+    "raw_response": "<h3 id=\"t\" class=\"acc\" onclick=\"document.getElementById('b').hidden=false\">Shipping info</h3><button id=\"b\" onclick=\"document.getElementById('t').style.display='none'\">Ships in 2 days</button>",
+    "finish": "stop"
+   },
+   "label": "Accordion header",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<h3 id=\"t\" class=\"acc\" onclick=\"document.getElementById('b').hidden=false\">Shipping info</h3><button id=\"b\" onclick=\"document.getElementById('t').style.display='none'\">Ships in 2 days</button>",
+   "after": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   }
+  },
+  {
+   "id": "link",
+   "raw": {
+    "request": {
+     "model": "llama-3.2-1b-instruct-q4_k_m",
+     "temperature": 0.2,
+     "max_tokens": 1500,
+     "messages": [
+      {
+       "role": "system",
+       "content": "You repair web accessibility problems. You get one HTML fragment. The control with id=\"t\" works with a mouse but not with the keyboard. Return ONLY the corrected HTML fragment, keeping id=\"t\" and the same visible behaviour. Use native elements (button, a) where suitable. No explanation, no code fences."
+      },
+      {
+       "role": "user",
+       "content": "<span id=\"t\" class=\"lnk\" onclick=\"document.body.dataset.went=1\">Read more</span>"
+      }
+     ]
+    },
+    "raw_response": "<span id=\"t\" class=\"lnk\" onclick=\"document.body.dataset.went=1\"><a href=\"#\" onclick=\"document.body.dataset.went=1\">Read more</a></span>",
+    "finish": "stop"
+   },
+   "label": "Fake link",
+   "before": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   },
+   "repair_html": "<span id=\"t\" class=\"lnk\" onclick=\"document.body.dataset.went=1\"><a href=\"#\" onclick=\"document.body.dataset.went=1\">Read more</a></span>",
+   "after": {
+    "reached": false,
+    "focus": false,
+    "enter": false,
+    "ok": false
+   }
+  },
+  {
+   "id": "focusring",
+   "raw": {
+    "request": {
+     "model": "llama-3.2-1b-instruct-q4_k_m",
+     "temperature": 0.2,
+     "max_tokens": 1500,
+     "messages": [
+      {
+       "role": "system",
+       "content": "You repair web accessibility problems. You get one HTML fragment. The control with id=\"t\" works with a mouse but not with the keyboard. Return ONLY the corrected HTML fragment, keeping id=\"t\" and the same visible behaviour. Use native elements (button, a) where suitable. No explanation, no code fences."
+      },
+      {
+       "role": "user",
+       "content": "<button id=\"t\" class=\"btn\" style=\"outline:none\" onclick=\"this.dataset.on=1\">Save</button>"
+      }
+     ]
+    },
+    "raw_response": "<button id=\"t\" class=\"btn\" style=\"outline:none\" onclick=\"this.dataset.on=1\">Save</button>\n<a id=\"t\" class=\"btn\" style=\"outline:none\" onclick=\"this.dataset.on=1\">Save</a>",
+    "finish": "stop"
+   },
+   "label": "Button with focus ring removed",
+   "before": {
+    "reached": true,
+    "focus": false,
+    "enter": true,
+    "ok": false
+   },
+   "repair_html": "<button id=\"t\" class=\"btn\" style=\"outline:none\" onclick=\"this.dataset.on=1\">Save</button>\n<a id=\"t\" class=\"btn\" style=\"outline:none\" onclick=\"this.dataset.on=1\">Save</a>",
+   "after": {
+    "reached": true,
+    "focus": false,
+    "enter": true,
+    "ok": false
+   }
+  }
+ ]
+}
